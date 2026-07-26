@@ -47,9 +47,12 @@ function Contact() {
         transition={{ duration: 0.8, delay: 0.1 }}
         className="relative my-4 sm:my-5 text-gray-500 text-sm sm:text-base text-center max-w-md sm:max-w-lg"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-        alias soluta, assumenda eaque voluptatum officia ratione excepturi?
-        Necessitatibus, reiciendis quam?
+        Have a project in mind or looking for a developer to bring your ideas to
+        life? I'd love to hear about it. Whether you need a modern website, a
+        full-stack application, AI-powered automation, or technical guidance,
+        let's discuss how we can build a solution that meets your goals. Fill
+        out the form below or reach out directly, and I'll get back to you as
+        soon as possible.
       </motion.p>
 
       <motion.form

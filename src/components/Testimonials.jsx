@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards, Pagination } from "swiper/modules";
 
-
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
@@ -88,9 +87,13 @@ function Testimonials() {
           Testimonials
         </h1>
         <p className="text-sm sm:text-base text-center text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          laboriosam, consequuntur perferendis Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Delectus, non.
+          I believe great software is built through clear communication,
+          transparency, and a genuine commitment to delivering results. Every
+          project is an opportunity to create lasting value for clients by
+          combining modern technologies with thoughtful problem-solving. Here
+          are a few experiences shared by people I've worked with, reflecting
+          the quality, professionalism, and dedication I bring to every
+          collaboration.
         </p>
       </motion.div>
 

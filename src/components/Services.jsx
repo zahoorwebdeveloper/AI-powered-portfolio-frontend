@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 import ServiceCard from "./ServiceCard";
 
 function Services() {
-  // Container variants for staggering the cards
+ 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Each card appears 0.2s after the previous one
+        staggerChildren: 0.2,
       },
     },
   };
@@ -43,9 +43,7 @@ function Services() {
           Services
         </h1>
         <p className="text-sm sm:text-base text-center text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          laboriosam, consequuntur perferendis Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Delectus, non.
+          I build fast, scalable, and user-focused web applications that help businesses grow. From modern landing pages and full-stack SaaS platforms to AI-powered solutions and custom API integrations, I focus on creating reliable software that delivers real business value. Every project is developed with clean, maintainable code, responsive design, strong performance, SEO best practices, and a seamless user experience across all devices.
         </p>
       </motion.div>
 
