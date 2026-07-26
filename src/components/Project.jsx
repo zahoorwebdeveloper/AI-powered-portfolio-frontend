@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import api from "../lib/axios.js";
 
 function Projects() {
-  // Container variants for the grid
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -16,7 +16,7 @@ function Projects() {
     },
   };
 
-  // Variants for each individual project card
+  
   const itemVariants = {
     hidden: { y: 40, opacity: 0, scale: 0.95 },
     visible: {
@@ -32,8 +32,7 @@ function Projects() {
   };
 
   const fetchProjects = async () => {
-    const API_URL = import.meta.env.VITE_API_URL;
-    const { data } = await axios.get(`${API_URL}/projects`);
+    const { data } = await api.get('/projects');
     return data;
   };
   const { data, isLoading, error } = useQuery({
@@ -71,9 +70,7 @@ function Projects() {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="text-sm text-center text-gray-500"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          laboriosam, consequuntur perferendis Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Delectus, non.
+          Each project in my portfolio reflects my focus on building scalable, high-performance, and user-centric solutions. From responsive web applications and full-stack platforms to AI-powered systems and API integrations, I prioritize clean architecture, modern technologies, and real-world problem solving. Explore my work to see how I turn ideas into reliable, impactful digital products.
         </motion.p>
       </motion.div>
 

@@ -43,7 +43,7 @@ function Navbar() {
     "Contact",
   ];
 
-  // Smooth-scroll handler — prevents default jump, closes mobile menu, then scrolls
+  
   const handleNavClick = (e, item) => {
     e.preventDefault();
     const targetId = item.toLowerCase().replace(" ", "");

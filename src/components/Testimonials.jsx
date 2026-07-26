@@ -69,7 +69,7 @@ function Testimonials() {
       id="testimonials"
       className="relative my-12 sm:my-16 lg:my-[75px] flex flex-col items-center overflow-hidden px-4 sm:px-6"
     >
-      {/* Decorative background glow — matches About/Services theme */}
+     
       <div
         className="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-orange-400 blur-[100px] opacity-20 pointer-events-none"
         style={{ top: "10%" }}
@@ -97,7 +97,7 @@ function Testimonials() {
         </p>
       </motion.div>
 
-      {/* Swiper Card Stack — scales up across breakpoints */}
+      
       <div className="relative mt-8 sm:mt-10 w-full max-w-[300px] xs:max-w-[340px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px]">
         <Swiper
           effect={"cards"}
@@ -119,7 +119,7 @@ function Testimonials() {
                   {item.feedback}
                 </p>
 
-                {/* User Information Profile footer */}
+                
                 <div className="mt-4 sm:mt-6 flex items-center gap-3 sm:gap-4 border-t border-gray-100 pt-3 sm:pt-4">
                   <img
                     src={item.avatar}

@@ -3,11 +3,9 @@ import { motion } from "framer-motion";
 function ProjectCard({ image, title, description, live, github }) {
   return (
     <motion.div
-      // Lift the whole card slightly and add shadow on hover
       whileHover={{ y: -5 }}
       className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden pb-2"
     >
-      {/* IMAGE SECTION with Zoom Effect */}
       <div className="m-3 overflow-hidden rounded-2xl">
         <motion.img
           whileHover={{ scale: 1.1 }}
