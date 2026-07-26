@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   getProjects,
@@ -55,8 +55,8 @@ export default function Dashboard() {
   const createMutation = useMutation({
     mutationFn: (formData) => createProject(formData),
 
-    onSuccess: () => {
-      queryClient.invalidateQueries({
+    onSuccess: async () => {
+      await queryClient.invalidateQueries({
         queryKey: ["projects"],
       });
 
@@ -67,8 +67,8 @@ export default function Dashboard() {
   const updateMutation = useMutation({
     mutationFn: ({ id, formData }) => updateProject({ id, formData }),
 
-    onSuccess: () => {
-      queryClient.invalidateQueries({
+    onSuccess: async() => {
+      await queryClient.invalidateQueries({
         queryKey: ["projects"],
       });
 
@@ -79,8 +79,8 @@ export default function Dashboard() {
   const deleteMutation = useMutation({
     mutationFn: deleteProject,
 
-    onSuccess: () => {
-      queryClient.invalidateQueries({
+    onSuccess: async () => {
+      await queryClient.invalidateQueries({
         queryKey: ["projects"],
       });
 
@@ -164,6 +164,10 @@ export default function Dashboard() {
       setImgError("Choose an image.");
       return;
     }
+    if (file.size > 5 * 1024 * 1024) {
+      setImgError("Image must be less than 5MB");
+      return;
+    }
 
     setSelectedImage(file);
 
@@ -228,10 +232,10 @@ export default function Dashboard() {
     }
   }
 
-  function normalizeUrl(url) {
+  const normalizeUrl = useCallback((url) => {
     if (!url) return "";
     return /^https?:\/\//i.test(url) ? url : `https://${url}`;
-  }
+  }, []);
 
   return (
     <div className="min-h-screen w-full bg-slate-50 text-slate-900">

@@ -7,12 +7,12 @@ export const getProjects = async () => {
 
 export const createProject = async (formData) => {
   const { data } = await api.post("/projects", formData);
-  return data.project;
+  return data;
 };
 
 export const updateProject = async ({ id, formData }) => {
   const { data } = await api.put(`/project/${id}`, formData);
-  return data.project;
+  return data;
 };
 
 export const deleteProject = async (id) => {
