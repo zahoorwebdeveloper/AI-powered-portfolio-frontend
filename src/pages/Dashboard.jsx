@@ -53,7 +53,7 @@ export default function Dashboard() {
   });
 
   const createMutation = useMutation({
-    mutationFn: ({formData}) => createProject({formData}),
+    mutationFn: (formData) => createProject(formData),
 
     onSuccess: () => {
       queryClient.invalidateQueries({
