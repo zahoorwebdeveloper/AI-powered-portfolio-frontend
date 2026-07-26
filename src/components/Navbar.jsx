@@ -43,13 +43,12 @@ function Navbar() {
     "Contact",
   ];
 
-  
   const handleNavClick = (e, item) => {
     e.preventDefault();
     const targetId = item.toLowerCase().replace(" ", "");
     const el = document.getElementById(targetId);
 
-    setIsOpen(false); 
+    setIsOpen(false);
 
     if (el) {
       setTimeout(
@@ -183,8 +182,8 @@ function Navbar() {
               ))}
 
               <motion.a
-                href="../../public/Zahoor_Ahmad_Resume.pdf"
-                download
+                href="/Zahoor_Ahmad_Resume.pdf"
+                download="/Zahoor_Ahmad_Resume.pdf"
                 variants={itemVariants}
                 className="mt-4 p-4 text-center bg-[#FD6F00] text-white rounded-xl shadow-lg"
               >
