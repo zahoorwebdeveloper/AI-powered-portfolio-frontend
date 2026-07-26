@@ -1,9 +1,9 @@
-import Card from "./card";
 import { FaCode } from "react-icons/fa";
 import { PiBracketsCurlyBold } from "react-icons/pi";
 import { FaGear } from "react-icons/fa6";
 import { RiComputerFill } from "react-icons/ri";
 import { motion } from "framer-motion";
+import ServiceCard from "./ServiceCard";
 
 function Services() {
   // Container variants for staggering the cards
@@ -58,7 +58,7 @@ function Services() {
         className="mt-8 sm:mt-10 w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-4 place-items-center"
       >
         <motion.div variants={itemVariants} className="w-full flex justify-center">
-          <Card
+          <ServiceCard
             Icon={FaCode}
             title={"Frontend"}
             discription={"Custom responsive web development delivering interactive, fast, user-centric digital interfaces."}
@@ -66,7 +66,7 @@ function Services() {
         </motion.div>
 
         <motion.div variants={itemVariants} className="w-full flex justify-center">
-          <Card
+          <ServiceCard
             Icon={PiBracketsCurlyBold}
             title={"Backend"}
             discription={"Secure, scalable server-side systems managing databases, APIs, and business logic."}
@@ -74,7 +74,7 @@ function Services() {
         </motion.div>
 
         <motion.div variants={itemVariants} className="w-full flex justify-center">
-          <Card
+          <ServiceCard
             Icon={FaGear}
             title={"System Design"}
             discription={"Scalable architectural planning defining software components, data flows, and infrastructure."}
@@ -82,7 +82,7 @@ function Services() {
         </motion.div>
 
         <motion.div variants={itemVariants} className="w-full flex justify-center">
-          <Card
+          <ServiceCard
             Icon={RiComputerFill}
             title={"devOps"}
             discription={"Streamlining software delivery through automated deployment, continuous integration, and infrastructure management."}

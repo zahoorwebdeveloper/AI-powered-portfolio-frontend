@@ -1,7 +1,7 @@
-// Inside Card.jsx
+
 import { motion } from "framer-motion";
 
-function Card({ Icon, title, discription }) {
+function ServiceCard({ Icon, title, discription }) {
   return (
     <motion.div 
       whileHover={{ 
@@ -10,7 +10,6 @@ function Card({ Icon, title, discription }) {
         boxShadow: "0px 20px 30px rgba(0,0,0,0.1)" 
       }}
       className="p-6 rounded-xl border border-gray-200 transition-colors duration-300 cursor-default"
-      // Add your existing card classes here
     >
       <div className="text-[#FD6F00] text-4xl mb-4">
         <Icon />
@@ -21,4 +20,4 @@ function Card({ Icon, title, discription }) {
   );
 }
 
-export default Card
+export default ServiceCard
