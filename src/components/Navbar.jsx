@@ -132,8 +132,8 @@ function Navbar() {
 
       {/* DESKTOP BUTTON */}
       <motion.a
-        href="../../public/Zahoor_Ahmad_Resume.pdf"
-        download
+        href="/Zahoor_Ahmad_Resume.pdf"
+        download="/Zahoor_Ahmad_Resume.pdf"
         className="hidden md:block p-3 cursor-pointer font-bold font-poppins bg-[#FD6F00] text-white rounded shadow-md"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.9 }}
